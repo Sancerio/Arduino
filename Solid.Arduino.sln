@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Arduino", "Solid.Arduino\Solid.Arduino.csproj", "{FDF9E431-2390-4C7B-AE60-10183439A683}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Arduino.Test", "Solid.Arduino.Test\Solid.Arduino.Test.csproj", "{74525FE1-E248-449B-B499-F3FB205054F8}"
@@ -12,6 +14,8 @@ EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{721253FB-22D4-4DB6-8C7E-5F90118F52D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Arduino.IntegrationTest", "Solid.Arduino.IntegrationTest\Solid.Arduino.IntegrationTest.csproj", "{40D8E3F0-DCCF-4F19-8EC0-2E6EC476B629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{1EC7BDEA-610C-4293-B284-3C07E58A59A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{40D8E3F0-DCCF-4F19-8EC0-2E6EC476B629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D8E3F0-DCCF-4F19-8EC0-2E6EC476B629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D8E3F0-DCCF-4F19-8EC0-2E6EC476B629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC7BDEA-610C-4293-B284-3C07E58A59A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC7BDEA-610C-4293-B284-3C07E58A59A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC7BDEA-610C-4293-B284-3C07E58A59A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC7BDEA-610C-4293-B284-3C07E58A59A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

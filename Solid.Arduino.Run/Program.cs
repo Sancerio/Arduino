@@ -12,21 +12,21 @@ namespace Solid.Arduino.Run
 {
     class Program
     {
+        private static ISerialConnection serialConnectionPort;
+
         static void Main(string[] args)
         {
             Console.WriteLine("Started.");
             var p = new Program();
             AutoOpenTest();
-
-            Console.ReadLine();
-            Console.WriteLine("Ready.");
+            SimpelTest();
         }
 
         private static void AutoOpenTest()
         {
             for (int x = 0; x < 1; x++)
             {
-                var a = SerialConnection.FindSerialConnection();
+                serialConnectionPort = SerialConnection.FindSerialConnection();
 
             }
         }
@@ -69,9 +69,25 @@ namespace Solid.Arduino.Run
             Console.WriteLine("Message {0} received: {1}", eventArgs.Value.Type, o);
         }
 
+        static void SimpleTest()
+        {
+            var connection = new EnhancedSerialConnection(serialConnectionPort.PortName, SerialBaudRate.Bps_57600);
+            var session = new ArduinoSession(connection, timeOut: 250);
+            IFirmataProtocol firmata = session;
+            firmata.SetDigitalPinMode(13,PinMode.DigitalOutput);
+
+            while (true)
+            {
+                firmata.SetDigitalPort(1,0xff);
+                Thread.Sleep(1000);
+                firmata.SetDigitalPort(1,0x00);
+                Thread.Sleep(1000);
+            }
+        }
+
         static void SimpelTest()
         {
-            var connection = new EnhancedSerialConnection("COM6", SerialBaudRate.Bps_57600);
+            var connection = new EnhancedSerialConnection(serialConnectionPort.PortName, SerialBaudRate.Bps_57600);
             var session = new ArduinoSession(connection, timeOut: 250);
             IFirmataProtocol firmata = session;
 
